@@ -2,7 +2,7 @@ import React from 'react'
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as CourseActions from '../../store/actions/course'
+import * as CourseActions from '../../store/ducks/course/actions'
 
 const Sidebar = ({ modules, toggleLesson }) => {
     return (
