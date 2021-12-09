@@ -1,7 +1,8 @@
 import { RepositoriesTypes } from "./types";
 
-export const loadRequest = () => ({
+export const loadRequest = (url) => ({
     type: RepositoriesTypes.LOAD_REQUEST,
+    url,
 });
 
 export const loadSuccess = (data) => ({

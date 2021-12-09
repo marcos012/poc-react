@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react'
 
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as RepositoryActions from '../../store/ducks/repositories/actions'
+import { useDispatch, useSelector } from 'react-redux';
+import { loadRequest } from '../../store/ducks/repositories/actions'
 
-const RepositoryList = ({ repositories, loading, error, loadRequest }) => {
+const RepositoryList = () => {
+    const { data: repositories, error, loading } = useSelector(state => state.repositories);
+    const dispatch = useDispatch();
+    
     useEffect(() => {
-        loadRequest();
+        dispatch(loadRequest('users/marcos012/repos'));
     }, [])
 
     return (
@@ -26,12 +28,4 @@ const RepositoryList = ({ repositories, loading, error, loadRequest }) => {
     );
 }
 
-const mapStateToProps = state => ({
-    repositories: state.repositories.data,
-    error: state.repositories.error,
-    loading: state.repositories.loading,
-});
-
-const mapDispatchToProps = dispatch => bindActionCreators(RepositoryActions, dispatch)
-
-export default connect(mapStateToProps, mapDispatchToProps)(RepositoryList);
+export default RepositoryList;
