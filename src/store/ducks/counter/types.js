@@ -1,0 +1,6 @@
+export const CounterTypes = {
+    INCREMENT: 'INCREMENT', 
+    DECREMENT: 'DECREMENT',
+    LOAD_RANDOM_NUMBER: '@counter/LOAD_RANDOM_NUMBER', 
+    SUCCESS_RANDOM_NUMBER: '@counter/SUCCESS_RANDOM_NUMBER', 
+}
