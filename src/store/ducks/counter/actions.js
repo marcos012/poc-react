@@ -24,3 +24,9 @@ export function loadRandomNumber() {
         type: CounterTypes.LOAD_RANDOM_NUMBER,
     }
 }
+
+export function errorRandomNumber() {
+    return {
+        type: CounterTypes.ERROR_RANDOM_NUMBER,
+    }
+}

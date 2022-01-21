@@ -1,6 +1,4 @@
 import { Provider } from "react-redux";
-import RepositoryList from "./components/RepositoryList";
-import Sidebar from "./components/Sidebar";
 import AppRouter from "./Routes";
 import store from "./store";
 
